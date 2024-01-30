@@ -6,46 +6,57 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-//    for(int i = 0; i < 2; i++) {
+//    Scanner sc = new Scanner(System.in);
 //
-//      String s1 = sc.nextLine();
+//    ArrayList<ArrayList<String>> list = new ArrayList<>();
 //
-//      String s2 = sc.nextLine();
-//
-//      String s4 = " ";
-//
-//      String s3 = s1 + s4 + s2;
-//
-//
-//      System.out.println("입력하신 내용의 합은 " + s3 + " 입니다.");
+//    for (int i = 0; i < 9; i++) {
+//      String string = sc.nextLine();
+//      if(string.length() == 9 && string.matches("^[1-9.]+$")) {
+//        ArrayList<String> row = new ArrayList<>();
+//        for(int j = 0; j < 9; j++) {
+//          char c = string.charAt(j);
+//          if(c == '.') {
+//            row.add("0");
+//          } else {
+//            row.add(String.valueOf(c));
+//          }
+//        }
+//        list.add(row);
+//      } else {
+//        System.out.println("1부터 9 사이의 숫자를 입력해주세요.");
+//        i--;
+//      }
 //    }
-//    boolean flag = false;
 //
-//    while (!flag) {
-//      System.out.println("입력 :");
-//      String s1 = sc.nextLine();
-//      String s2 = sc.nextLine();
-//      String s3 = sc.nextLine();
-//      String s4 = sc.nextLine();
-//      String s5 = sc.nextLine();
+//    sc.close();
 //
-//      String s6 = s1 + " " + s2 + " " + s3 + " " + s4 + " " + s5;
-//      System.out.println("입력 하신 내용의 합은 " + s6 + " 입니다.");
-//      flag = true;
+//    // 리스트 출력
+//    System.out.println(list.get(0).get(0));
+
+//    int[][] arr = {{1,2,1},{2,3,3},{5,5,5}};
+
+//    for(int i = 0; i < arr.length; i++) {
+//      for(int j = 0; j < arr[i].length; j++) {
+//        for(int k = 1; k < arr[i].length; k++) {
+//          if(arr[i][j] == arr[i][k]) {
+//            System.out.println("같은 숫자" + arr[i][j] +  "있습니다.");
+//          }
+//        }
+//        System.out.println();
+//      }
 //    }
 
-    ArrayList<String> list = new ArrayList<>();
-    String string = "";
+    int[] arr = {1,1,2,3,4,5,6,7,8};
 
-    StringBuilder answer = new StringBuilder();
-    for (int i = 0; i < 9; i++) {
-      string = sc.nextLine();
-      answer.append(string);
-      list.add(string);
+    for(int n = 0; n < 9; n++) {
+      for(int i = 1; i < arr.length; i++) {
+        if(arr[n] == arr[i]) {
+          System.out.println("숫자 n은" + i + "번째 인덱스에 있습니다.");
+        }
+        System.out.println();
+      }
     }
-    System.out.println(answer);
-    System.out.println(list);
 
   }
 }
