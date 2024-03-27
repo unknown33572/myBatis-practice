@@ -11,15 +11,13 @@ public class Main {
 
     ArrayList<ArrayList<String>> list = new ArrayList<>();
 
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < 3; i++) {
       String string = sc.nextLine();
-      if(string.length() == 9 && string.matches("^[1-9]+$")) {
+      if(string.length() == 3 && string.matches("^[1-9]+$")) {
         ArrayList<String> row = new ArrayList<>();
-        for(int j = 0; j < 9; j++) {
+        for(int j = 0; j < 3; j++) {
           char c = string.charAt(j);
-
-            row.add(String.valueOf(c));
-
+          row.add(String.valueOf(c));
         }
         for(int n = 0; n < row.size(); n++) {
           for(int x = n + 1; x < row.size(); x++) {
@@ -46,29 +44,25 @@ public class Main {
       }
       System.out.println();
     }
-
-//    int[][] arr = {{1,2,1},{2,3,3},{5,5,5}};
-
-//    for(int i = 0; i < arr.length; i++) {
-//      for(int j = 0; j < arr[i].length; j++) {
-//        for(int k = 1; k < arr[i].length; k++) {
-//          if(arr[i][j] == arr[i][k]) {
-//            System.out.println("같은 숫자" + arr[i][j] +  "있습니다.");
-//          }
-//        }
-//        System.out.println();
-//      }
-//    }
-
-//    int[] arr = {1,1,1,4,4,4,4};
-//
-//    for(int n = 0; n < arr.length; n++) {
-//      for(int i = n + 1; i < arr.length; i++) {
-//        if(n != i && arr[n] == arr[i]) {
-//            System.out.println("같은 숫자" + arr[n] +  "있습니다.");
-//        }
-//      }
-//    }
-
+    for(int i = 0; i < 3; i++) {
+      System.out.println(i + "번째" + "Loop");
+      for(int j = i + 1; j < 3; j++) {
+        if(list.get(i).get(0).equals(list.get(j).get(0))) {
+          System.out.println("같은 숫자" + list.get(i).get(0) + "있습니다.");
+          return;
+        } else {
+          System.out.println("같은 숫자 없음");
+        }
+//        System.out.println(j + "LooP" + "첫번째");
+//        System.out.println(list.get(i).get(0));
+//        System.out.println(list.get(j).get(0));
+//        System.out.println(j + "Loop" + "두번째");
+//        System.out.println(list.get(i).get(1));
+//        System.out.println(list.get(j).get(1));
+//        System.out.println(j + "Loop" + "세번째");
+//        System.out.println(list.get(i).get(2));
+//        System.out.println(list.get(j).get(2));
+      }
+    }
   }
 }
