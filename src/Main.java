@@ -44,24 +44,22 @@ public class Main {
       }
       System.out.println();
     }
+//    for (int i = 0; i < 3; i++) {
+//      for (int j = i + 1; j < 3; j++) {
+//        for (int k = 0; k < 3; k++) {
+//          if (list.get(i).get(k).equals(list.get(j).get(k))) {
+//            System.out.println(list.get(i).get(k) + " 있음");
+//          }
+//        }
+//      }
+//    }
     for(int i = 0; i < 3; i++) {
-      System.out.println(i + "번째" + "Loop");
       for(int j = i + 1; j < 3; j++) {
-        if(list.get(i).get(0).equals(list.get(j).get(0))) {
-          System.out.println("같은 숫자" + list.get(i).get(0) + "있습니다.");
-          return;
+        if(list.get(i).get(j).equals(list.get(j).get(i))) {
+          System.out.println("같은 숫자" + list.get(i).get(j) + " 있습니다.");
         } else {
           System.out.println("같은 숫자 없음");
         }
-//        System.out.println(j + "LooP" + "첫번째");
-//        System.out.println(list.get(i).get(0));
-//        System.out.println(list.get(j).get(0));
-//        System.out.println(j + "Loop" + "두번째");
-//        System.out.println(list.get(i).get(1));
-//        System.out.println(list.get(j).get(1));
-//        System.out.println(j + "Loop" + "세번째");
-//        System.out.println(list.get(i).get(2));
-//        System.out.println(list.get(j).get(2));
       }
     }
   }
